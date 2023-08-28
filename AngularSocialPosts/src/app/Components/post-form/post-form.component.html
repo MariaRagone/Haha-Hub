@@ -1,0 +1,12 @@
+<button (click)="toggleDisplay()">Add a New Post</button>
+<div *ngIf="displayForm">
+
+    <form (ngSubmit)="submitPost()">
+        <textarea cols="40" rows="1"  placeholder="Post Title"[(ngModel)]="newPost.postTitle" name="Title"></textarea>
+        <br>
+        <br>
+        <textarea cols="40" rows="3" placeholder="Body"[(ngModel)]="newPost.postTitle" name="Title"></textarea>
+        <br>
+        <button type="submit">add post</button>
+    </form>
+</div>

@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+
+        <h2>Add a new Haha</h2>
+        
+        <app-post-form (postCreated)="addPost($event)"></app-post-form>
+    </div>
+    <h1>All Hahas</h1>
+    <h6 style="float: right;">Sort by # of Votes</h6>
+    <p></p>
+    <br>
+    
+    <button style="float: right;" *ngIf="!sortingDecending" (click)="sortPostsByVotesDecending()">Decending</button>
+    <button style="float: right;"  *ngIf="sortingDecending" (click)="sortPostsByVotesAscending()">Ascending</button>
+
+
+    <br>
+    <br>
+
+    <div id="container">
+        <!-- Loop through listPosts and generate cards -->
+        <app-single-post *ngFor="let p of listPosts" [individualPost]="p"></app-single-post>
+    </div>
+
+
+
+</body>
+</html>

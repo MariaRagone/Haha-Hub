@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+.header {
+    background-color: #33383d; 
+    color: white;
+    padding: 20px;
+}
+body{
+    background-color: #f6f7f8;
+    text-align: center;
+    color: #20232a;
+}
+
+
+
+@import '~font-awesome/css/font-awesome.css';
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: auto;
+    flex-wrap: wrap;     
+    justify-content: space-between;
+    /* overflow-x: auto; Enable horizontal scrolling if needed */
+  /* Center the container in the middle of the page horizontally */
+    margin: 0 auto;
+  /* Add empty space above the container (20% of the view height) */
+    /* margin-top: 20vh; */
+}
+@media screen and (min-width: 768px) {
+    #container {
+        justify-content: space-between; /* Adjust as needed */
+    }
+}
+
+/* Media query for screens wider than 1200px */
+@media screen and (min-width: 1200px) {
+    #container {
+        justify-content: space-around; /* Adjust as needed */
+    }
+}
+
+button {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin: 8px 8px 8px 8px;
+    padding: 8px 8px 8px 8px;
+    padding: 10px, 10px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #3b5998;
+    /* Button is inline-block element by default, it need to have block display for margin: 0 auto; to work */
+    margin: 0 auto;
+    display: block;
+    /* Button is a clickable element, therefore it should have a pointer cursor */
+    cursor: pointer;
+  }
+  button:focus,
+button:hover {
+  background-color: #ffffff;
+  color: #ff4b2b;
+}

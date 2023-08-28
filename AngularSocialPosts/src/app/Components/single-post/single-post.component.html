@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div *ngIf="!postDeleted">
+            <div id="container">
+                <div class="card">
+                    <img src={{individualPost.image}}>
+                    <div class="card_details">
+                        <div class="name">
+                            {{individualPost.postTitle}}
+                        </div>
+                        <p>{{individualPost.postBody}}</p>
+                        <span class="tag">{{individualPost.numberOfVotes}} Votes </span>
+                        <button  *ngIf="!voted" (click)="upVotePost()" >Upvote!</button>
+                        <button  *ngIf="voted"(click)="removeVote()">Remove vote</button>
+                        <div class="icon">
+
+                            <i class="fa fa-trash" (click)="deletePost()"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        
+</body>
+</html>
